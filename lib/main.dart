@@ -29,19 +29,34 @@ class Screen1 extends StatelessWidget {
       appBar: AppBar(
         title: Text('Screen 1'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('This is Screen 1'),
-            ElevatedButton(
-              child: Text('Go to Screen 2'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/screen2');
-              },
-            ),
-          ],
-        ),
+      body: ListView(
+        children: [
+          Center(child: Text('This is Screen 1')),
+          ElevatedButton(
+            child: Text('Go to Screen 2'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/screen2');
+            },
+          ),
+          ListTile(
+            title: Text('Go to Screen 3'),
+            onTap: () {
+              Navigator.pushNamed(context, '/screen3');
+            },
+          ),
+          ListTile(
+            title: Text('Go to Screen 4'),
+            onTap: () {
+              Navigator.pushNamed(context, '/screen4');
+            },
+          ),
+          ListTile(
+            title: Text('Go to Screen 5'),
+            onTap: () {
+              Navigator.pushNamed(context, '/screen5');
+            },
+          ),
+        ],
       ),
     );
   }
@@ -71,10 +86,10 @@ class Screen3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen 3'),
+        title: Text('Screen 3.1'),
       ),
       body: Center(
-        child: Text('This is Screen 3'),
+        child: Text('This is Screen 3.1'),
       ),
     );
   }
@@ -85,10 +100,10 @@ class Screen4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen 4'),
+        title: Text('Screen 4.1'),
       ),
       body: Center(
-        child: Text('This is Screen 4'),
+        child: Text('This is Screen 4.1'),
       ),
     );
   }
@@ -99,10 +114,10 @@ class Screen5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen 5'),
+        title: Text('Screen 5.1'),
       ),
       body: Center(
-        child: Text('This is Screen 5'),
+        child: Text('This is Screen 5.1'),
       ),
     );
   }
